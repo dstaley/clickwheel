@@ -102,3 +102,7 @@ Unfortunately, modern versions of macOS do not support issuing SCSI INQUIRY requ
 ## HashAB
 
 HashAB is the name given to the as-of-yet unbroken database hashing scheme used on the 6th and 7th generation iPod nanos. Clickwheel does not support devices that use HashAB.
+
+## Acknowledgements
+
+Clickwheel is a modern update of [sharepod-lib](https://github.com/dstaley/sharepod-lib), originally written by Jeffrey Harris.
