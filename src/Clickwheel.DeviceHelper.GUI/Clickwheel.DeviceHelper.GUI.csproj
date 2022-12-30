@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <RollForward>Major</RollForward>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <PublishReadyToRun>true</PublishReadyToRun>
+		    <PublishSingleFile>true</PublishSingleFile>
+		    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+        <Platforms>x64;arm64</Platforms>
+        <ApplicationIcon>icon.ico</ApplicationIcon>
+        <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    </PropertyGroup>
+
+	<ItemGroup>
+    <None Remove="icon.png" />
+  </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="icon.ico" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.2.164-beta">
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
+      <PackageReference Include="WPF-UI" Version="2.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Clickwheel.DeviceHelper\Clickwheel.DeviceHelper.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="icon.png" />
+    </ItemGroup>
+
+</Project>

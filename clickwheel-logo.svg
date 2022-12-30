@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/" width="100%" height="100%" viewBox="0 0 1024 1024" version="1.1" xml:space="preserve">
+  <defs>
+    <linearGradient id="baseGradient" y1="100%">
+      <stop offset="0%" stop-color="#bfbfbf" />
+      <stop offset="100%" stop-color="#f2f2f2" />
+    </linearGradient>
+    <linearGradient id="baseStrokeGradient" y1="100%">
+      <stop offset="0%" stop-color="#666666" />
+      <stop offset="100%" stop-color="#b2b2b2" />
+    </linearGradient>
+    <linearGradient id="wheelGradient" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cccccc" />
+      <stop offset="100%" stop-color="#bfbfbf" />
+    </linearGradient>
+    <linearGradient id="buttonGradient" y1="100%">
+      <stop offset="0%" stop-color="#d9d9d9" />
+      <stop offset="100%" stop-color="#f2f2f2" />
+    </linearGradient>
+  </defs>
+  <style>
+    .base {
+      fill: url(#baseGradient);
+      stroke: url(#baseStrokeGradient);
+      stroke-width: 5px;
+    }
+
+    .wheel {
+      fill: url(#wheelGradient);
+      filter: drop-shadow(0 0 16px rgba(0, 0, 0, 0.4));
+      stroke: #d9d9d9;
+    }
+
+    .button {
+      fill: url(#buttonGradient);
+    }
+  </style>
+  <rect class="base" x="5" y="5" width="1014" height="1014" rx="10%" />
+  <circle class="wheel" cx="512" cy="512" r="370" />
+  <circle class="button" cx="512" cy="512" r="132.4" />
+</svg>

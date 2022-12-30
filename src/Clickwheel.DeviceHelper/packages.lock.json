@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net6.0-windows7.0": {
+      "Microsoft.Windows.CsWin32": {
+        "type": "Direct",
+        "requested": "[0.1.635-beta, )",
+        "resolved": "0.1.635-beta",
+        "contentHash": "brXs1R12DrxiC/iKvG9c86UzXflw/pdhY3HPJjZlbu8Md/lwN9X3H24N5ywCsszLhoTXQc0deJQcLilPzbNsDg==",
+        "dependencies": {
+          "Microsoft.Windows.SDK.Win32Docs": "0.1.7-alpha",
+          "Microsoft.Windows.SDK.Win32Metadata": "17.0.2-preview",
+          "System.Memory": "4.5.4"
+        }
+      },
+      "Microsoft.Windows.SDK.Win32Docs": {
+        "type": "Transitive",
+        "resolved": "0.1.7-alpha",
+        "contentHash": "+8ygOfBME88Sq75zMopFfqCdxBxZoKDlizPK6iYxzSGf6j51rd9ISNJ20UKfOSr746tgn9GNyVI+jc0JXfnuZA=="
+      },
+      "Microsoft.Windows.SDK.Win32Metadata": {
+        "type": "Transitive",
+        "resolved": "17.0.2-preview",
+        "contentHash": "1sI2+VPcO0HK1/OI1n1iZQluv4vL+P8kfbkJJIN8fbjZbNJhJLwpKyixNyuele+hg63Q7LKAPwJpft/hIEgZSg=="
+      },
+      "System.Memory": {
+        "type": "Transitive",
+        "resolved": "4.5.4",
+        "contentHash": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw=="
+      }
+    },
+    "net6.0-windows7.0/win-arm64": {}
+  }
+}

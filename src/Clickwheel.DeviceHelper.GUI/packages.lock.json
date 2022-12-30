@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net6.0-windows7.0": {
+      "Microsoft.Windows.CsWin32": {
+        "type": "Direct",
+        "requested": "[0.2.164-beta, )",
+        "resolved": "0.2.164-beta",
+        "contentHash": "FxKqWqtYHAeLvJPAH8q2R6AERm91N8eX051DQ+muY6zKlymqO2c5cHNEYeAdFJwNP0Hy4MYsYhqTWJdxFCgogg==",
+        "dependencies": {
+          "Microsoft.Windows.SDK.Win32Docs": "0.1.12-alpha",
+          "Microsoft.Windows.SDK.Win32Metadata": "39.0.18-preview",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "WPF-UI": {
+        "type": "Direct",
+        "requested": "[2.0.3, )",
+        "resolved": "2.0.3",
+        "contentHash": "1e9Q8pQGfi9YFp3WavKZjXyLYohIjXxk5q0NqEaamofVgIdxRxwqrkWha584FBUISRBBT/qFOrl97YBl5bs30Q==",
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0"
+        }
+      },
+      "Microsoft.Win32.SystemEvents": {
+        "type": "Transitive",
+        "resolved": "6.0.0",
+        "contentHash": "hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A=="
+      },
+      "Microsoft.Windows.SDK.Win32Docs": {
+        "type": "Transitive",
+        "resolved": "0.1.12-alpha",
+        "contentHash": "DcKRcvQkTP+aT1Y+GcrzhmZJ9zEXpwqrcQZNER0k+ksLUDl0hsAFMqhpI4aqwEEXG1qbLyAINqcZHE47kpqt6Q=="
+      },
+      "Microsoft.Windows.SDK.Win32Metadata": {
+        "type": "Transitive",
+        "resolved": "39.0.18-preview",
+        "contentHash": "h6ayEOK8HxGr4+dwqRno/grl7JZwPfqv7SyMmJs9aQbAJm+cGygAsKkN5iSkEok0sFWZcjW3xVmjyMKlVYkglg=="
+      },
+      "System.Drawing.Common": {
+        "type": "Transitive",
+        "resolved": "6.0.0",
+        "contentHash": "NfuoKUiP2nUWwKZN6twGqXioIe1zVD0RIj2t976A+czLHr2nY454RwwXs6JU9Htc6mwqL6Dn/nEL3dpVf2jOhg==",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "6.0.0"
+        }
+      },
+      "System.Memory": {
+        "type": "Transitive",
+        "resolved": "4.5.5",
+        "contentHash": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw=="
+      },
+      "System.Runtime.CompilerServices.Unsafe": {
+        "type": "Transitive",
+        "resolved": "6.0.0",
+        "contentHash": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg=="
+      },
+      "clickwheel.devicehelper": {
+        "type": "Project"
+      }
+    },
+    "net6.0-windows7.0/win-arm64": {
+      "Microsoft.Win32.SystemEvents": {
+        "type": "Transitive",
+        "resolved": "6.0.0",
+        "contentHash": "hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A=="
+      },
+      "System.Drawing.Common": {
+        "type": "Transitive",
+        "resolved": "6.0.0",
+        "contentHash": "NfuoKUiP2nUWwKZN6twGqXioIe1zVD0RIj2t976A+czLHr2nY454RwwXs6JU9Htc6mwqL6Dn/nEL3dpVf2jOhg==",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "6.0.0"
+        }
+      }
+    }
+  }
+}
