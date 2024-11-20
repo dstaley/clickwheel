@@ -485,7 +485,15 @@ namespace Clickwheel.Parsers.iTunesDB
 
         public IPodTrackSize FileSize => _fileSize;
 
-        public IPodTrackLength Length => _trackLength;
+        public IPodTrackLength Length
+        {
+            get => _trackLength;
+            set
+            {
+                _trackLength = value;
+                _isDirty = true;
+            }
+        }
 
         public uint TrackNumber
         {

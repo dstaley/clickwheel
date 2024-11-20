@@ -8,7 +8,7 @@
     <PackageTags>iPod</PackageTags>
     <Description>A modern cross-platform iPod management API for .NET</Description>
     <PackageIcon>clickwheel.128.png</PackageIcon>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <TargetFramework>net7.0</TargetFramework>
     <AnalysisLevel>latest-All</AnalysisLevel>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
