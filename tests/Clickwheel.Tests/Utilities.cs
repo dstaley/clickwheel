@@ -40,6 +40,7 @@ namespace Clickwheel.Tests
                 track.FileType,
                 track.Bitrate.ToString(),
                 track.SampleRate.ToString(),
+                track.SampleCount.ToString(),
                 track.Length.ToString(),
                 track.FileSize.ToString(),
                 track.DateAdded.DateTime.ToString("o"),

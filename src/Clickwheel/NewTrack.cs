@@ -24,6 +24,8 @@ namespace Clickwheel
         /// </summary>
         public uint Length;
 
+        public ulong SampleCount;
+
         /// <summary>
         /// Bitrate in kb (e.g. 192)
         /// </summary>

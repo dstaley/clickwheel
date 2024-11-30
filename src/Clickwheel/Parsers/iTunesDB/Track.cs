@@ -69,6 +69,14 @@ namespace Clickwheel.Parsers.iTunesDB
         private ulong _dbId2;
         bool _hasLyrics,
             _isVideoFile;
+        private bool _playedMark;
+        private byte _unk17;
+        private byte[] _unk21;
+        private int _pregap;
+        private ulong _sampleCount;
+        private byte[] _unk25;
+        private int _postgap;
+        private byte[] _unk27;
         private byte[] _unk4,
             _unk5;
         private int _mediaType;
@@ -152,7 +160,15 @@ namespace Clickwheel.Parsers.iTunesDB
             _dbId2 = reader.ReadUInt64();
             _hasLyrics = reader.ReadBoolean();
             _isVideoFile = reader.ReadBoolean();
-            _unk4 = reader.ReadBytes(30);
+            _playedMark = reader.ReadBoolean();
+            _unk17 = reader.ReadByte();
+            _unk21 = reader.ReadBytes(4);
+            _pregap = reader.ReadInt32();
+            _sampleCount = reader.ReadUInt64();
+            _unk25 = reader.ReadBytes(4);
+            _postgap = reader.ReadInt32();
+            _unk27 = reader.ReadBytes(4);
+            _unk4 = reader.ReadBytes(0);
 
             _mediaType = reader.ReadInt32();
             _unk5 = reader.ReadBytes(44);
@@ -222,6 +238,14 @@ namespace Clickwheel.Parsers.iTunesDB
             writer.Write(_dbId2);
             writer.Write(_hasLyrics);
             writer.Write(_isVideoFile);
+            writer.Write(_playedMark);
+            writer.Write(_unk17);
+            writer.Write(_unk21);
+            writer.Write(_pregap);
+            writer.Write(_sampleCount);
+            writer.Write(_unk25);
+            writer.Write(_postgap);
+            writer.Write(_unk27);
             writer.Write(_unk4);
             writer.Write(_mediaType);
             writer.Write(_unk5);
@@ -540,6 +564,16 @@ namespace Clickwheel.Parsers.iTunesDB
 
         public uint SampleRate => _sampleRate / 0x10000;
 
+        public ulong SampleCount
+        {
+            get => _sampleCount;
+            set
+            {
+                _sampleCount = value;
+                _isDirty = true;
+            }
+        }
+
         /// <summary>
         /// Volume Adjustment can be between -255 and 255. 0 is default. Use to make songs louder or quieter than normal.
         /// </summary>
@@ -856,7 +890,15 @@ namespace Clickwheel.Parsers.iTunesDB
 
             _unk1 = new byte[12];
             _unk3 = new byte[38];
-            _unk4 = new byte[30];
+            _playedMark = false;
+            _unk17 = 0;
+            _unk21 = new byte[4];
+            _pregap = 0;
+            _sampleCount = newTrack.SampleCount;
+            _unk25 = new byte[4];
+            _postgap = 0;
+            _unk27 = new byte[4];
+            _unk4 = new byte[0];
             _unk5 = new byte[44];
             _unusedHeader = new byte[_headerSize - _requiredHeaderSize];
             _type = new byte[2];
