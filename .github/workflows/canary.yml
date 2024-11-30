@@ -36,6 +36,13 @@ jobs:
           version=$(echo "$path_to_nupkg" | sed -n 's/.*Clickwheel\.\([-0-9A-Za-z.]*\)\.nupkg/\1/p')
           echo "path_to_nupkg=$path_to_nupkg" >> $GITHUB_OUTPUT
           echo "version=$version" >> $GITHUB_OUTPUT
+          
+      - name: Publish to NuGet
+        run: |
+          dotnet nuget push ${{ steps.get_filename.outputs.path_to_nupkg }} \
+          --api-key ${{ secrets.CLICKWHEEL_NUGET_API_KEY }} \
+          --source https://api.nuget.org/v3/index.json \
+          --skip-duplicate
         
       - name: Comment
         uses: marocchino/sticky-pull-request-comment@v2
