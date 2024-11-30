@@ -19,4 +19,4 @@ jobs:
           dotnet-quality: 'ga'
 
       - name: Run Tests
-        run: dotnet test
+        run: dotnet test Clickwheel.Filter.slnf

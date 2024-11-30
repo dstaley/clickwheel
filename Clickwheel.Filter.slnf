@@ -1,0 +1,9 @@
+﻿{
+  "solution": {
+    "path": "Clickwheel.sln",
+    "projects": [
+      "src\\Clickwheel\\Clickwheel.csproj",
+      "tests\\Clickwheel.Tests\\Clickwheel.Tests.csproj"
+    ]
+  }
+}
