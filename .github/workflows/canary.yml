@@ -23,14 +23,9 @@ jobs:
         with:
           dotnet-version: '9'
           dotnet-quality: 'ga'
-          
-      - name: Build
-        run: dotnet build ./src/Clickwheel/Clickwheel.csproj /p:VersionSuffix=canary.${HEAD_SHA::7}
-        env:
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
 
       - name: Package Library
-        run: dotnet pack ./src/Clickwheel/Clickwheel.csproj /p:VersionSuffix=canary.${GITHUB_SHA::7}
+        run: dotnet pack ./src/Clickwheel/Clickwheel.csproj /p:VersionSuffix=canary.${HEAD_SHA::7}
         env:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         
