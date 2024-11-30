@@ -25,16 +25,20 @@ jobs:
           dotnet-quality: 'ga'
           
       - name: Build
-        run: dotnet build ./src/Clickwheel/Clickwheel.csproj /p:VersionSuffix=canary.${GITHUB_SHA::7}
+        run: dotnet build ./src/Clickwheel/Clickwheel.csproj /p:VersionSuffix=canary.${HEAD_SHA::7}
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
 
       - name: Package Library
         run: dotnet pack ./src/Clickwheel/Clickwheel.csproj /p:VersionSuffix=canary.${GITHUB_SHA::7}
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         
       - name: Get Filename
         id: get_filename
         run: |
           path_to_nupkg=$(find ./src/Clickwheel/bin/Release -type f -name "*.nupkg" | head -n 1)
-          version=$(echo "path_to_nupkg" | sed -n 's/.*Clickwheel\([-0-9A-Za-z.]*\)\.nupkg/\1/p')
+          version=$(echo "$path_to_nupkg" | sed -n 's/.*Clickwheel\([-0-9A-Za-z.]*\)\.nupkg/\1/p')
           echo "path_to_nupkg=$path_to_nupkg" >> $GITHUB_OUTPUT
           echo "version=$version" >> $GITHUB_OUTPUT
         
