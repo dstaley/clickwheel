@@ -38,7 +38,7 @@ jobs:
         id: get_filename
         run: |
           path_to_nupkg=$(find ./src/Clickwheel/bin/Release -type f -name "*.nupkg" | head -n 1)
-          version=$(echo "$path_to_nupkg" | sed -n 's/.*Clickwheel\([-0-9A-Za-z.]*\)\.nupkg/\1/p')
+          version=$(echo "$path_to_nupkg" | sed -n 's/.*Clickwheel\.\([-0-9A-Za-z.]*\)\.nupkg/\1/p')
           echo "path_to_nupkg=$path_to_nupkg" >> $GITHUB_OUTPUT
           echo "version=$version" >> $GITHUB_OUTPUT
         
