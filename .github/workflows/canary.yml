@@ -1,0 +1,55 @@
+name: 'Canary Release'
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
+
+jobs:
+  release:
+    name: 'Release Canary'
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'release:canary')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9'
+          dotnet-quality: 'ga'
+          
+      - name: Build
+        run: dotnet build ./src/Clickwheel/Clickwheel.csproj /p:VersionSuffix=canary.${GITHUB_SHA::7}
+
+      - name: Package Library
+        run: dotnet pack ./src/Clickwheel/Clickwheel.csproj /p:VersionSuffix=canary.${GITHUB_SHA::7}
+        
+      - name: Get Filename
+        id: get_filename
+        run: |
+          path_to_nupkg=$(find ./src/Clickwheel/bin/Release -type f -name '*.nupkg" | head -n 1)
+          version=$(echo "path_to_nupkg" | sed -n 's/.*Clickwheel\([-0-9A-Za-z.]*\)\.nupkg/\1/p')
+          echo "path_to_nupkg=$path_to_nupkg" >> $GITHUB_OUTPUT
+          echo "version=$version" >> $GITHUB_OUTPUT
+        
+      - name: Comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        if: success()
+        with:
+          header: 'canary-release'
+          message: |
+            ### :package: Canary Package Published
+            
+            Latest commit: ${{ github.event.pull_request.head.sha }}
+            
+            #### Clickwheel@${{ steps.get_filename.outputs.version }}
+            
+            ```
+            dotnet add package Clickwheel --version ${{ steps.get_filename.outputs.version }}
+            ```
