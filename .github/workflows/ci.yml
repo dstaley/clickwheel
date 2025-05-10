@@ -1,4 +1,4 @@
-name: 'Test'
+name: "Test"
 on:
   pull_request:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    name: 'Run Tests'
+    name: "Run Tests"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -15,8 +15,8 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9'
-          dotnet-quality: 'ga'
+          dotnet-version: "7"
+          dotnet-quality: "ga"
 
       - name: Run Tests
         run: dotnet test Clickwheel.Filter.slnf
