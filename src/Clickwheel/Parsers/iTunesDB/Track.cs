@@ -69,7 +69,7 @@ namespace Clickwheel.Parsers.iTunesDB
         private ulong _dbId2;
         bool _hasLyrics,
             _isVideoFile;
-        private bool _playedMark;
+        private byte _playedMark;
         private byte _unk17;
         private byte[] _unk21;
         private int _pregap;
@@ -160,7 +160,7 @@ namespace Clickwheel.Parsers.iTunesDB
             _dbId2 = reader.ReadUInt64();
             _hasLyrics = reader.ReadBoolean();
             _isVideoFile = reader.ReadBoolean();
-            _playedMark = reader.ReadBoolean();
+            _playedMark = reader.ReadByte();
             _unk17 = reader.ReadByte();
             _unk21 = reader.ReadBytes(4);
             _pregap = reader.ReadInt32();
@@ -890,7 +890,7 @@ namespace Clickwheel.Parsers.iTunesDB
 
             _unk1 = new byte[12];
             _unk3 = new byte[38];
-            _playedMark = false;
+            _playedMark = 0x01;
             _unk17 = 0;
             _unk21 = new byte[4];
             _pregap = 0;
