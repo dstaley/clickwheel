@@ -10,7 +10,7 @@ When iTunes syncs, the first thing it does is read the values that the iPod has 
 
 The play count header indicates a valid play count file and specifies how many entries follow and the size of each entry record. The is an entry record for each song on the iPod; the entry position corresponding to the position of the song in the iTunesDB.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhdp
 4 | header length | 4 | 0x60
@@ -23,7 +23,7 @@ The rest of the header is zero-padded.
 
 The entry record contains the play count data for each song, one record exists for each song on the iPod.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | play count | 4 | number of played times since last sync
 4 | last played | 4 | last played time. Set to zero in older firmwares, or to the value from iTunesDB in newer ones (anything with the "Music" menu).

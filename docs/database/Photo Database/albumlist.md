@@ -2,7 +2,7 @@
 
 The Album List has no children in the case of the `ArtworkDB` file, and 1 or more children for the `Photo Database` file: 1 child for the Photo Library and possibly some more children for additional photo albums.
 
-field | size | value
+Field | Size | Value
 ----- | ---- | -----
 header identifier | 4 | mhla
 header length | 4 | size of the mhla header (0x5c)

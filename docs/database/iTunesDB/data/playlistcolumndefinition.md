@@ -2,7 +2,7 @@
 
 This data object is at the beginning of every playlist (before any MHIP entries). Only iTunes puts it there, and only iTunes uses it. It contains information on what columns to display, and what size to display them as, when displaying the playlist in iTunes when the iPod is in a manual mode. This is absolutely optional. The iPod itself doesn't appear to use it in any way.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhod
 4 | header length | 4 | size of the mhod header. This is always 0x18 for this type of MHOD.
@@ -27,7 +27,7 @@ After the column definitions, the rest of the MHOD is zero-padded.
 
 Each column definition only consists of an ID for the playlist and the sort direction for the column. The order they appear in this MHOD are the order they appear in iTunes, from left to right. The first two columns are always song position and title, in that order.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | ID | 2 | the ID for this column, see below for possible values
 2 | width | 2 | the width of the column, in pixels
@@ -37,7 +37,7 @@ offset | field | size | value
 
 ## Column IDs
 
-ID | description
+ID | Description
 -- | -----------
 0x01 | position; leftmost column in all playlists
 0x02 | Name

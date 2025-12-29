@@ -2,7 +2,7 @@
 
 The MHODs found in the ArtworkDB and Photo Database files are significantly different than those found in the normal iTunesDB files.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhod
 4 | header length | 4 | size of the MHOD header (0x18)
@@ -17,7 +17,7 @@ There are 2 groups of types of MHODs in the ArtworkDB: container MHODs contain a
 
 **Attention:** Sometimes it seems that the MHBAs in the new video and nano iPods' Photo Database have a second MHOD child which, although being identified by a type of 2, is a string (and not container) MHOD. This second string MHOD in photo album is usually found in Photo Database files generated on Macs, probably by iPhoto, and contains an UTF-8 string describing a transition effect such as "Dissolve". However in Photo Database files generated on PCs for example by iTunes 6 for an iPod video 30Gb this does not happen, and there is only one type-1 string MHOD as child, just like with iPod Photo/Color Photo Database files.
 
-type | group | description
+Type | Group | Description
 ---- | ----- | -----------
 1 | string | Album name (in the Photo Database)
 2 | container | Thumbnail image
@@ -32,7 +32,7 @@ MHODs with type 2 contain a MHNI that (contains a type 3 MHOD that) references a
 
 The content of string MHODs (probably all types except 2 and 5, although only 1 and 3 have been observed so far) is structured again with something like a sub-header:
 
-field | size | value
+Field | Size | Value
 ----- | ---- | -----
 string length | 4 | length in bytes of the string (e.g. after encoding)
 unknown | 4 | might be the string encoding: 0,1 == UTF-8; 2 == UTF-16-LE. Observed values are: 1 in type 1 MHODs and 2 in type 3 MHODs.

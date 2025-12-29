@@ -2,7 +2,7 @@
 
 A slightly more complex MHOD. These are any MHOD with a "type" that is 50. This MHOD defines the stuff in the Smart playlist that is not the "rules". Basically all the checkboxes and such. It's pretty straightforward.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhod
 4 | header length | 4 | size of the mhod header.
@@ -24,7 +24,7 @@ The `mhod` IS zero padded at the end (58 null bytes)
 
 ## Limit types
 
-value | description
+Value | Description
 ----- | -----------
 1 | Minutes
 2 | Megabytes
@@ -34,7 +34,7 @@ value | description
 
 ## Limit sort types
 
-value | description
+Value | Description
 ----- | -----------
 0x02 | Random
 0x03 | Song Name (alphabetical)

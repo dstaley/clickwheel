@@ -1,6 +1,6 @@
 # ImageName (`mhni`)
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhni
 4 | header length | 4 | size of the mhni header (0x4c)
@@ -28,7 +28,7 @@ There is no indication in this object what the pixel format, actual pixel map di
 
 Here are the dimensions and formats for all known image sizes:
 
-size | height | width | format | description
+Size | Height | Width | Format | Description
 ---- | ------ | ----- | ------ | -----------
 691200 | 480 | 720 | UYVY | PhotoPod and VideoPod NTSC image
 153600 | 240 | 320 | RGB565_LE | VideoPod full screen

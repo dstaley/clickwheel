@@ -2,7 +2,7 @@
 
 The simplest form of MHOD. These are any MHOD with a "type" that is less than 15.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhod
 4 | header length | 4 | size of the mhod header. This is always 0x18 for string type MHOD's.

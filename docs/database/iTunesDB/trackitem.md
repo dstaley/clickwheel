@@ -1,6 +1,6 @@
 # TrackItem (`mhit`)
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhit
 4 | header length | 4 | size of the mhit header.  For dbversion <= 0x0b (iTunes 4.7 and earlier), the length is 0x9c. For dbversion >= 0x0c (iTunes 4.71 and later), the size is 0xf4. For dbversion = 0x12 (iTunes 6.0.5), 0x13 (iTunes 7.0) the size is 0x148. For dbversion >= 0x14 (iTunes 7.1) the size is 0x184.

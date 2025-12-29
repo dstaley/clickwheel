@@ -1,6 +1,6 @@
 # Data File (`mhfd`)
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhfd
 4 | header length | 4 | size of the mhfd header (0x84)

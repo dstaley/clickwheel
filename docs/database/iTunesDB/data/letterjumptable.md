@@ -2,7 +2,7 @@
 
 The Letter Jump Table is only found as a child of the Main Library Playlist.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhod
 4 | header length | 4 | size of the mhod header.
@@ -19,7 +19,7 @@ Letter Jump Table mhods are **NOT** zero padded.
 
 ## Table Entry
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | letter | 4 | The letter of this table entry. Looks like uppercase UTF-16LE with 2 padding null bytes (i.e. A would be 0x00000041 little endian / 0x41000000 big endian)
 4 | header length | 4 | the number of the first entry in the corresponding MHOD52 index starting with this letter. Zero-based and incremented by one for each entry, not 4.

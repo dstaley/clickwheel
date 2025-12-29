@@ -2,7 +2,7 @@
 
 The File List has Files (Images) as its children.
 
-field | size | value
+Field | Size | Value
 ----- | ---- | -----
 header identifier | 4 | mhlf
 header length | 4 | size of the mhlf header (0x5c)

@@ -2,7 +2,7 @@
 
 Introduced in db version 0x0d, MHOD's with type 15 and 16 hold the Enclosure and RSS URL for the Podcast. The string is probably UTF-8, but only Unicode symbols U+0000 through U+007F (a.k.a ASCII) have been observed.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhod
 4 | header length | 4 | size of the mhod header. This is always 0x18 for string type MHOD's.

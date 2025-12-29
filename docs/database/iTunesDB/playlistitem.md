@@ -1,6 +1,6 @@
 ## PlaylistItem (`mhip`)
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhip
 4 | header length | 4 | size of the mhip header

@@ -4,7 +4,7 @@ An MHBA allows you to setup an Album of photos (grouping photos together in an a
 
 These are only supported on models that support photos.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhba
 4 | header length | 4 | size of the mhba header (0x94)

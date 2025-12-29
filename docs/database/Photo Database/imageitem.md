@@ -2,7 +2,7 @@
 
 MHOD type 2. Not a string like it is in iTunesDB, but still defines location of the file in question. Its mhni child record contains everything that is needed about the image file.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhii
 4 | header length | 4 | size of the mhii header (0x98)

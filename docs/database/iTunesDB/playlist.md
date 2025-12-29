@@ -1,6 +1,6 @@
 # Playlist (`mhyp`)
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhyp
 4 | header length | 4 | size of the mhyp header

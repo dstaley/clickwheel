@@ -1,6 +1,6 @@
 # AlbumItem (`mhia`)
 
-field | size | value
+Field | Size | Value
 ----- | ---- | -----
 header identifier | 4 | mhia
 header length | 4 | size of the mhia header (0x28)

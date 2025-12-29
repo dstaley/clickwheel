@@ -8,7 +8,7 @@ Essentially, every MHIT is numbered from 0 to the total number of songs-1. The t
 
 To build one of these, take all your songs, order them alphabetically by one of these fields, then simply insert the index numbers of the ordered songs into the type 52 mhod.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhod
 4 | header length | 4 | size of the mhod header.
@@ -25,8 +25,8 @@ Library Playlist Index mhods are **NOT** zero padded.
 
 ## Types
 
-type number | field that it indexes
------------ | ---------------------
+Type Number | Indexed Field
+----------- | -------------
 0x03 | Title
 0x04 | Album, then Disc/Tracknumber, then Title
 0x05 | Artist, then Album, then Disc/Tracknumber, then Title

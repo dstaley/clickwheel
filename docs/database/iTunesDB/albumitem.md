@@ -2,7 +2,7 @@
 
 Usually mhia has two child strings: album title and artist name.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhia
 4 | header length | 4 | size of the mhia header.  Length is 0x58

@@ -1,6 +1,6 @@
 # FileImage (`mhif`)
 
-field | size | value
+Field | Size | Value
 ----- | ---- | -----
 header identifier | 4 | mhif
 header length | 4 | size of the mhif header (0x7c)

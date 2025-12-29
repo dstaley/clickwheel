@@ -2,7 +2,7 @@
 
 The chapter data defines where the chapter stops are in the track, as well as what info should be displayed for each section of the track. It seems that the format of this mhod changed significantly over time. The following is analysed from an iTunesDB version 0x13 (iTunes 7.0).
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhod
 4 | header length | 4 | size of the mhod header. This is always 0x18.
@@ -51,7 +51,7 @@ hedr (signals the end)
 
 Each atom consists of the following:
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | size | 4 | size of the atom and all its children Caution: This is different to all other structures in the file, where the name always comes first. Here, the length is the first word of the atom!
 4 | atom name | 4 | the name of the atom
@@ -65,7 +65,7 @@ For all other atoms: always 1?
 
 UTF-16 String entries in these atoms (like 'name') fit the following mold:
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | size | 4 | size of the atom and all its children (0x16 + 2*string length in characters, e.g. for a 8 char string this is 0x26)
 4 | atom name | 4 | the name of the atom
@@ -79,7 +79,7 @@ offset | field | size | value
 
 UTF-8 entries fit the following mold:
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | size | 4 | size of the atom and all its children
 4 | atom name | 4 | the name of the atom
@@ -90,7 +90,7 @@ offset | field | size | value
 
 ## Chapter Data `hedr` Atom
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | size | 4 | size of the atom, 0x1c
 4 | atom name | 4 | the name of the atom, 'hedr'

@@ -2,7 +2,7 @@
 
 This is basically the same as the MHSD element in the iTunes DB. Depending on the index, the Data Set either contains an Image List (mhli) child, an Album List (mhla) child or a File List child (mhlf).
 
-field | size | value
+Field | Size | Value
 ----- | ---- | -----
 header identifier | 4 | mhsd
 header length | 4 | size of the mhsd header (0x60)

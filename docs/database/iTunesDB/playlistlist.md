@@ -1,6 +1,6 @@
 # PlaylistList (`mhlp`)
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhlp
 4 | header length | 4 | size of the mhlp header

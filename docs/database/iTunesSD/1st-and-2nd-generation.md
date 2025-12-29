@@ -4,7 +4,7 @@ The iTunesSD file on 1st and 2nd generation iPod shuffle is in a big-endian byte
 
 ## Header
 
-field | size | value
+Field | Size | Value
 ----- | ---- | -----
 num songs | 3 | Number of song entries in the file.
 unknown | 3 | 0x010600? iTunes 7.2 puts 0x010800 here
@@ -15,7 +15,7 @@ The rest of header is **NOT** zero padded.
 
 ## Entry
 
-field | size | value
+Field | Size | Value
 ----- | ---- | -----
 size of entry | 3 | Always 0x22e (558 bytes)
 unk1 | 3 | unknown (always 0x5aa501 ?)

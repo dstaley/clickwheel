@@ -4,7 +4,7 @@ The most complex (and annoying) MHOD. These are any MHOD with a "type" that is 5
 
 **Important Note about endian-ness**: Smart Playlist Rules MHODs are NOT wholly little-endian. Everything after the "SLst" to the end of the MHOD is big-endian. This is important to remember, especially when dealing with the Action types.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhod
 4 | header length | 4 | size of the mhod header.
@@ -23,7 +23,7 @@ Smart Playlist Rule mhods are **NOT** zero padded.
 
 ## Smart Playlist Rule Fields
 
-value | description | expected comparison
+Value | Description | Expected Comparison
 ----- | ----------- | -------------------
 0x02 | Song Name | String
 0x03 | Album | String
@@ -66,14 +66,14 @@ The Action type is a 4 byte field. It is a bitmapped value, meaning that each bi
 
 ## High byte
 
-bit | description
+Bit | Description
 --- | -----------
 0 | The action is referring to a string value if set, not a string if not set
 1 | NOT flag. If set, this negates the rule. Is becomes is not, contains becomes does not contain, and so forth.
 
 ## Low bytes
 
-bit | description
+Bit | Description
 --- | -----------
 0 | Simple "IS" query
 1 | Contains
@@ -89,7 +89,7 @@ bit | description
 
 ## Actions
 
-value | action
+Value | Action
 ----- | ------
 0x00000001 | Is Int (also Is Set in iTunes)
 0x00000010 | Is Greater Than (also Is After in iTunes)
@@ -123,7 +123,7 @@ So there are two major rule formats, the String Rule and the Non-String Rule.
 
 ### SPLRule String format
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | field | 4 | The Field type
 4 | action | 4 | The Action type
@@ -135,7 +135,7 @@ Rules are NOT zero padded at the end.
 
 ### SPLRule Non-String format
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | field | 4 | The Field type
 4 | action | 4 | The Action type

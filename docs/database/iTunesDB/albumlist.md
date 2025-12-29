@@ -4,7 +4,7 @@ Album List, first seen with iTunes 7.1. It was seen on iPod nano 2nd gen and Shu
 
 The Album List has Album Items as its children. The number of Album Items is the same all albums on iPod.
 
-offset | field | size | value
+Offset | Field | Size | Value
 ------ | ----- | ---- | -----
 0 | header identifier | 4 | mhla
 4 | header length | 4 | size of the mhla header
