@@ -60,13 +60,10 @@ total_length | 4 |  | 372 | 74 01 00 00
 start_at_pos_ms | 4 |  | 0 | 00 00 00 00
 stop_at_pos_ms | 4 | Rythmbox IPod plugin sets this value always 0. | 112169 | 29 b6 01 00
 volume_gain | 4 |  | 0x00000000 | 00 00 00 00
-filetype | 4 | Type 1 are mpeg, mp3 files
-Type 2 arere aac, mp4, m4a files
-Type 4 are wav files | 1 (MP3) | 01 00 00 00
+filetype | 4 | Type 1 are mpeg, mp3 files, Type 2 arere aac, mp4, m4a files, Type 4 are wav files | 1 (MP3) | 01 00 00 00
 filename | 256 |  | /iPod_Control/Music/F02/NNCN.mp3 | 2f 69 50 6f 64 5f 43 6f 6e 74 72 6f 6c 2f 4d 75 73 69 63 2f 46 30 32 2f 4e 4e 43 4e 2e 6d 70 33 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Bookmark | 4 | In milliseconds | 0x00000000 | 00 00 00 00
-dont_skip_on_shuffle | 1 | If all songs in a playlist don't have this bit set the playlist is skipped when the ipod is set to shuffle and a playlist is being chosen.
-It seems to be ignored when shuffling within a playlist! | 1 | 01
+dont_skip_on_shuffle | 1 | If all songs in a playlist don't have this bit set the playlist is skipped when iPod is set to shuffle and a playlist is being chosen. It seems to be ignored when shuffling within a playlist. | 1 | 01
 remember_playing_pos | 1 |  | 0 | 00
 part_of_uninterruptable_album | 1 |  | 0 | 00
 unknown_1 | 1 |  | 0x00 | 00

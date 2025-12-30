@@ -27,7 +27,7 @@ The iTunesCDB uses the same [mhbd header structure](./iTunesDB/database.md) as t
 
 ## SQLite Databases
 
-Devices that use iTunesCDB also require a set of SQLite databases located in the `/iPod_Control/iTunes/iTunes Library.itlp` folder. These databases must be kept in sync with the iTunesCDB content.
+Devices that use iTunesCDB also require a set of SQLite databases located in the `/iPod_Control/iTunes/iTunes Library.itlp` folder. These databases must be kept in sync with the iTunesCDB content. 
 
 ### Database Files
 
@@ -36,4 +36,6 @@ Filename | Description
 `Library.itdb` | Main library database containing tracks, albums, artists, playlists, and metadata
 `Locations.itdb` | Maps track PIDs to file paths on the device
 `Dynamic.itdb` | Runtime/dynamic data (play counts, ratings, etc.)
-`Locations.itdb.cbk` | Integrity checksum file for Locations.itdb
+`Extras.itdb` | Chapter and lyric data
+`Genius.itdb` | Metadata for the Genius feature
+`Locations.itdb.cbk` | Integrity checksum file for Locations.itdb. Hash72 on iPod nano (5th generation) (166 bytes), and HashAB on iPod nano (6th generation) and iPod nano (7th generation) (177 bytes).
