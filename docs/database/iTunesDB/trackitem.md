@@ -8,7 +8,7 @@ Offset | Field | Size | Value
 12 | number of strings | 4 | number of strings (mhods) that are children of this mhit
 16 | unique id | 4 | unique ID for a track (referenced in playlists)
 20 | visible | 4 | If this value is 1, the song is visible on the iPod.  All other values cause the file to be hidden.  Was previously known as unk1.
-24 | filetype | 4 | This appears to always be 0 on 1st through 4th generation hard drive-based iPods. For the iTunesDB that is written to the 5th generation iPod (iPod Video) and the iPod Shuffle, iTunes 4.7.1 (and greater) writes out the file's type as an ANSI string padded with spaces.  For example, an MP3 file has a filetype of 0x4d503320 -> 0x4d = 'M', 0x50 = 'P', 0x33 = '3', 0x20 = <space>. AAC is 0x41414320 & "new" AAC which is used by iTunes 7, M4A, is 0x4D344120. Protected AAC files (purchased from iTunes Store) are M4P = 0x4D345020. Was previously known as unk2. This really is an integer field and is reversed in iTunesDB used in mobile phones with reversed endianess.
+24 | filetype | 4 | This appears to always be 0 on first- through fourth-generation hard drive-based iPods. For the iTunesDB that is written to fifth-generation iPod and iPod shuffle, iTunes 4.7.1 (and greater) writes out the file's type as an ANSI string padded with spaces.  For example, an MP3 file has a filetype of 0x4d503320 -> 0x4d = 'M', 0x50 = 'P', 0x33 = '3', 0x20 = <space>. AAC is 0x41414320 & "new" AAC which is used by iTunes 7, M4A, is 0x4D344120. Protected AAC files (purchased from iTunes Store) are M4P = 0x4D345020. Was previously known as unk2. This really is an integer field and is reversed in iTunesDB used in mobile phones with reversed endianess.
 28 | type1 | 1 | CBR MP3s are type 0x00, VBR MP3s are type 0x01, AAC are type 0x00
 29 | type2 | 1 | CBR MP3s are type 0x01, VBR MP3s are type 0x01, AAC are type 0x00 (type1 and type2 used to be one 2 byte field, but by it doesn't get reversed in the reversed endian iTunesDB for mobile phones, so it must be two fields).
 30 | compilation flag | 1 | 1 if the flag is on, 0 if the flag is off
@@ -39,7 +39,7 @@ Offset | Field | Size | Value
 122 | BPM | 2 | the BPM of the track
 124 | artwork count | 2 | The number of album artwork items put into the tags of this song. Even if you don't put any artwork items into the tags of the song, this value must at least be 1 for the iPod to display any artwork stored in the ithmb files.
 126 | unk9 | 2 | unknown, but always seems to be 0xffff for MP3/AAC songs, 0x0 for uncompressed songs (like WAVE format), 0x1 for Audible
-128 | artwork size | 4 | The total size of artwork (in bytes) attached to this song (i.e. put into the song as tags).  Observed in iPodDB version 0x0b and with an iPod Photo as well as with iPodDB version 0x0d and an iPod Nano.
+128 | artwork size | 4 | The total size of artwork (in bytes) attached to this song (i.e. put into the song as tags).  Observed in iPodDB version 0x0b and with iPod photo as well as with iPodDB version 0x0d and iPod nano.
 132 | unk11 | 4 | unknown
 136 | sample rate 2 | 4 | The sample rate of the song expressed as an IEEE 32 bit floating point number. It's uncertain why this is here.
 140 | date released | 4 | date/time added to music store? For podcasts this corresponds to the release date as displayed to the right of the podcast title. Formerly known as unk13.
@@ -64,7 +64,7 @@ Offset | Field | Size | Value
 196 | unk25 | 4 | unknown (added in dbversion 0x0c)
 200 | postgap | 4 | Number of samples of silence at the end of the song (for gapless playback).
 204 | unk27 | 4 | unknown - added in dbversion 0x0c, first values observed in 0x0d.  Appears to be 0x1 for files encoded using the MP3 encoder, 0x0 otherwise.
-208 | Media Type | 4 | (formerly known as unk28; added in dbversion 0x0c). It seems that this field denotes the type of the file on (e.g.) the 5g video iPod. It must be set to 0x00000001 for audio files, and set to 0x00000002 for video files. If set to 0x00, the files show up in both, the audio menus ("Songs", "Artists", etc.) and the video menus ("Movies", "Music Videos", etc.). It appears to be set to 0x20 for music videos, and if set to 0x60 the file shows up in "TV Shows" rather than "Movies". See "Types" below for a summary of observed types. **Caution:** Even if a track is marked as "Audiobook" here (value 0x08), it will not show up in the "Audiobooks" menu on the iPod. Only *.aa and *.m4b are shown there by recent firmwares. One proven exception: On the nano they show if they have the correct media type set here and the MHIT also has a chapter data mhod!
+208 | Media Type | 4 | (formerly known as unk28; added in dbversion 0x0c). It seems that this field denotes the type of the file on (e.g.) fifth-generation iPod. It must be set to 0x00000001 for audio files, and set to 0x00000002 for video files. If set to 0x00, the files show up in both, the audio menus ("Songs", "Artists", etc.) and the video menus ("Movies", "Music Videos", etc.). It appears to be set to 0x20 for music videos, and if set to 0x60 the file shows up in "TV Shows" rather than "Movies". See "Types" below for a summary of observed types. **Caution:** Even if a track is marked as "Audiobook" here (value 0x08), it will not show up in the "Audiobooks" menu on the iPod. Only *.aa and *.m4b are shown there by recent firmwares. One proven exception: On iPod nano they show if they have the correct media type set here and the MHIT also has a chapter data mhod!
 212 | season number | 4 | the season number of the track, for TV shows only. Previously known as unk29. (added in dbversion 0x0c)
 216 | episode number | 4 | the episode number of the track, for TV shows only - although not displayed on the iPod, the episodes are sorted by episode number. Previously known as unk30. (added in dbversion 0x0c)
 220 | unk31 | 4 | unknown (added in dbversion 0x0c). Has something to do with protected files - set to 0x0 for non-protected files.
@@ -85,7 +85,7 @@ Offset | Field | Size | Value
 308 | unk43 | 4 | unknown (previously length 8, seen as 0x818080808080)
 312 | unk44 | 2 | unknown (previously length 8, seen as 0x818080808080)
 314 | AlbumID | 2 | album id from the album list (previously unknown length 8, seen as 0x818080808080)
-352 | mhii-link | 4 | Setting this offset to != 0 triggers the 'Right-Pane-Artwork-Slideshow' on late 2007 iPods (3g Nano) and causes the iPod to use this value to do artwork lookups (dbid_1 will be ignored!). This value should be set to the id of the corresponding ArtworkDB mhii (Offset 16)
+352 | mhii-link | 4 | Setting this offset to != 0 triggers the 'Right-Pane-Artwork-Slideshow' on late 2007 iPods (third-generation iPod nano) and causes the iPod to use this value to do artwork lookups (dbid_1 will be ignored!). This value should be set to the id of the corresponding ArtworkDB mhii (Offset 16)
 
 The rest of the header is zero padded.
 

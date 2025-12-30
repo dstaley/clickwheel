@@ -9,7 +9,7 @@ Offset | Field | Size | Value
 0 | header identifier | 4 | mhba
 4 | header length | 4 | size of the mhba header (0x94)
 8 | total length | 4 | size of the header and all child records
-12 | Data Object Child Count | 4 | number of Data Objects in the List, probably always 1. Sometimes seems to be 2 in the new video iPods' Photo Database, see below.
+12 | Data Object Child Count | 4 | number of Data Objects in the List, probably always 1. Sometimes seems to be 2 in fifth-generation iPods' Photo Database, see below.
 16 | Album Item Count | 4 | number of pictures in the album
 20 | playlist id | 4 | a unique integer for each playlist - starts out at $64 and increments by 1. Really seems to be the total number of pictures (MHII) + photo album number (+1 for the first album, +2 for the second, etc. etc.)
 24 | unk2 | 4 | unknown, seems to be always 0
@@ -31,4 +31,4 @@ The rest of the header is zero padded.
 
 The MHBA has several children: The first is a MHOD containing the album name (which is ignored if the MHBA is the Photo Library). After that there are several MHIAs that define which image to show in that album. The MHBA that is marked as Photo Library contains one MHIA record for every photo on the iPod.
 
-On the new video iPods and nanos of recent vintage, the MHBA has a second MHOD as a child which contains a string of which specifies the transition effect configured in iPhoto for the slideshow associated with this album. Apparently, the iPod ignores the slideshow settings that come from iPhoto, except for the slideshow soundtrack.
+On fifth-generation iPod and iPod nano, the MHBA has a second MHOD as a child which contains a string of which specifies the transition effect configured in iPhoto for the slideshow associated with this album. Apparently, iPod ignores the slideshow settings that come from iPhoto, except for the slideshow soundtrack.

@@ -9,7 +9,7 @@ Offset | Field | Size | Value
 
 The rest of the header is zero padded.
 
-Depending on the type of DataSet, it will contain either a Track List child or a Playlist List child. Order is not guaranteed. Example files have contained the type 3 MHSD before the type 2 MHSD. In order for the iPod to list podcasts the type 3 DataSet MUST come between the type 1 and type 2 DataSets.
+Depending on the type of DataSet, it will contain either a Track List child or a Playlist List child. Order is not guaranteed. Example files have contained the type 3 MHSD before the type 2 MHSD. In order for iPod to list podcasts the type 3 DataSet MUST come between the type 1 and type 2 DataSets.
 
 ## Types
 

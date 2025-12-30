@@ -11,11 +11,11 @@ Offset | Field | Size | Value
 24 | id | 8 | appears to a 64 bit id value for this database
 32 | unknown | 2 | always seems to be 2
 38 | unknown | 8 | Observed in dbversion 0x11 and later. It was thought that this field is used to store some sort of starting point to generate the item's dbid, but this idea was thrown away.
-48 | unknown | 2 | Observed in dbversion 0x19 and later, and must be set to 0x01 for the new iPod Nano 3G (video) and iPod Classics. The obscure hash at offset 88 needs to be set as well.
-50 | unknown | 20 | Observed in dbversion 0x19 and later for the new iPod Nano 3G (video) and iPod Classics. Meaning unknown so far.
+48 | unknown | 2 | Observed in dbversion 0x19 and later, and must be set to 0x01 for third-generation iPod nano and iPod classic. The obscure hash at offset 88 needs to be set as well.
+50 | unknown | 20 | Observed in dbversion 0x19 and later for third-generation iPod nano and iPod classic. Meaning unknown so far.
 70 | language | 2 | Observed in dbversion 0x13. It looks like this is a language id (langauge of the iTunes interface). For example for English(United States) this field has values 0x65 and 0x6E which is 'en'. The size of the filed might be bigger to distinguish different 'flavors' of a language.
 72 | library persistent id | 8 | Observed in dbversion 0x14. This is a 64-bit Persistent ID for this iPod Library. This matches the value of "Library Persistent ID" seen in hex form (as a 16-char hex string) in the drag object XML when dragging a song from an iPod in iTunes.
-88 | obscure hash | 20 | Observed in dbversion 0x19 for iPod Nano 3G (video) and iPod Classics.
+88 | obscure hash | 20 | Observed in dbversion 0x19 for third-generation iPod nano and iPod classic.
 
 The rest of the header is zero padded.
 

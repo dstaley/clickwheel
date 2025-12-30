@@ -1,6 +1,6 @@
-# iTunesSD (3rd and 4th generation)
+# iTunesSD (third- and fourth-generation)
 
-Just like in the iTunesDB the default size for integer numbers seems to be 32 bit. In earlier iTunesSD files it was a rather odd 24 bit. Like the iTunesDB, the new third generation iPod shuffle's iTunesSD is little endian. Earlier iTunesSD files were big endian.
+Just like in the iTunesDB the default size for integer numbers seems to be 32 bit. In earlier iTunesSD files it was a rather odd 24 bit. Like the iTunesDB, third-generation iPod shuffle's iTunesSD is little endian. Earlier iTunesSD files were big endian.
 
 Little endian means that the numbers start with the lowest byte. So a value of 0x12345678 (decimal 305419896) will be written in the iTunesSD file as 78 56 34 12. Apparently the apple developers liked to look at their files with a hex viewer to. At least they choose the magic numbers for their headers in a way that their ASCII representation tells you its purpose. So the database header starts with a magic number 0x73686462 (dec. 1936221282). Translating those bytes one by one into ASCII you get "s" "h" "d" "b". The little endian storage format changes the byte order so that the first characters of the new iTunesSD are in fact "bdhs", but now you know how we came up with the names for those separate elements.
 
@@ -111,4 +111,4 @@ playlist_track_1 | 4 |  | 118 | 76 00 00 00
 playlist_track_2 | 4 |  | 119 | 77 00 00 00
 ... | ... | ... | ... | ...
 
-A dbid of all zeros yields a voiceover of All songs. Also playlist dbids without a corresponding voiceover file will yield a voiceover of playlist n or audiobook n where n is the playlist number. The shuffle assumes the podcast playlist is last.
+A dbid of all zeros yields a voiceover of All songs. Also playlist dbids without a corresponding voiceover file will yield a voiceover of playlist n or audiobook n where n is the playlist number. iPod shuffle assumes the podcast playlist is last.

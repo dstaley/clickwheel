@@ -58,7 +58,7 @@ Value | Description | Expected Comparison
 0x45 | Last Skipped | Timestamp
 0x47 | Album Artist | String
 
-Special Note about Grouping and Playlist fields - They don't work with Live Updating on 3rd gen iPods, yet. This might get fixed in a future firmware release. Maybe.
+Special Note about Grouping and Playlist fields - They don't work with Live Updating on third-generation iPods, yet. This might get fixed in a future firmware release. Maybe.
 
 ## Smart Playlist Rule Actions
 
@@ -223,5 +223,5 @@ to units = 1
 That rule is saying "Today minus 2 times this number of seconds" which is 2 weeks before "now", whatever now happens to be.
 If you're creating your own rules in an iTunesDB, you may find it more convienent to leave the units set to "1" all the time and just put the number of seconds into the date field. This is perfectly acceptable and the iPod can handle it just fine. If you're not sure how to make a particular rule, create it or a similar one in iTunes and put it on the iPod, then examine the iTunesDB file to see how it did it.
 
-But if you're programming the iPod side of things, you need to be able to correctly understand the units field and deal with it accordingly. The best way to do this is to always compare the contents of the field in question with (value+date*unit), and replacing the "value" with the current timestamp ("now") when it is equal to 3,291,618,603,768,360,366 (0x2dae2dae2dae2dae). This will work for *all* integer and timestamp comparisons if done correctly. It's also exactly what the Apple iPod firmware does. It's also why you have to set the time/date on an iPod for these smart playlists to work correctly (3rd gen and up).
+But if you're programming the iPod side of things, you need to be able to correctly understand the units field and deal with it accordingly. The best way to do this is to always compare the contents of the field in question with (value+date*unit), and replacing the "value" with the current timestamp ("now") when it is equal to 3,291,618,603,768,360,366 (0x2dae2dae2dae2dae). This will work for *all* integer and timestamp comparisons if done correctly. It's also exactly what the Apple iPod firmware does. It's also why you have to set the time/date on an iPod for these smart playlists to work correctly (third generation and later).
 Also, remember that all timestamps should be dealt with in Apple format, which is the number of seconds since 1/1/1904.

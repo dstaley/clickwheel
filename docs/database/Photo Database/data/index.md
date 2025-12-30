@@ -15,7 +15,7 @@ The rest of the header is zero padded.
 
 There are 2 groups of types of MHODs in the ArtworkDB: container MHODs contain a MHNI as a child, while 'normal' string MHODs contain a string.
 
-**Attention:** Sometimes it seems that the MHBAs in the new video and nano iPods' Photo Database have a second MHOD child which, although being identified by a type of 2, is a string (and not container) MHOD. This second string MHOD in photo album is usually found in Photo Database files generated on Macs, probably by iPhoto, and contains an UTF-8 string describing a transition effect such as "Dissolve". However in Photo Database files generated on PCs for example by iTunes 6 for an iPod video 30Gb this does not happen, and there is only one type-1 string MHOD as child, just like with iPod Photo/Color Photo Database files.
+**Attention:** Sometimes it seems that the MHBAs in iPod (5th generation) and iPod nano Photo Database have a second MHOD child which, although being identified by a type of 2, is a string (and not container) MHOD. This second string MHOD in photo album is usually found in Photo Database files generated on Macs, probably by iPhoto, and contains an UTF-8 string describing a transition effect such as "Dissolve". However in Photo Database files generated on PCs for example by iTunes 6 for a 30 GB iPod (5th generation) this does not happen, and there is only one type-1 string MHOD as child, just like with iPod photo Photo Database files.
 
 Type | Group | Description
 ---- | ----- | -----------

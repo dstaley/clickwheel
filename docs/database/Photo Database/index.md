@@ -30,7 +30,7 @@ The type 5 mhod references the full resolution image and is probably only there 
 
 There is a *.ithmb file per resolution (in the directory "/Photos/Thumbs/"), that concatenates all thumbnails with that resolution.
 
-On an iPod video (5G) there are 4 different thumbnails type:
+On fifth-generation iPod there are 4 different thumbnails type:
 
 1. 720x480 interlaced UYVY (YUV 4:2:2) - used for TV output - 691200 bytes each single thumbnail
 1. 320x240 byte swapped RGB565 - used for fullscreen on the iPod - 153600 bytes each single thumbnail
@@ -39,7 +39,7 @@ On an iPod video (5G) there are 4 different thumbnails type:
 
 Dimensions of the fields in the Photo Database are very important. Only one total length field or one padding field with wrong value could be enough to make the Photo Database file completely unusable: then nothing will be displayed on the iPod, no photo albums, no photos.
 
-Here follows a complete structure for a Photo Database file working on an iPod video 5G:
+Here follows a complete structure for a Photo Database file working on a fifth-generation iPod:
 
 ```
  'mhfd', 132, 1384, 0, 1, 3, 0, 102, 0, 0, 0, 0, 2, 0, 0, 0, 0

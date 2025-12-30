@@ -1,8 +1,8 @@
 # Library Playlist Index (52)
 
-The type 52 MHOD is only found as a child of the Main Library Playlist. It is an index of the mhit's ordered by the major categories in the Browse menu. The purpose of these mhod's is to speed up the operation of the Browse menu itself. This is how it displays the information so quickly when selecting one of the major categories, it's all presorted for the iPod in these MHOD's.
+The type 52 MHOD is only found as a child of the Main Library Playlist. It is an index of the mhit's ordered by the major categories in the Browse menu. The purpose of these mhod's is to speed up the operation of the Browse menu itself. This is how it displays the information so quickly when selecting one of the major categories, it's all presorted in these MHOD's.
 
-Note that this MHOD is not mandatory, however the iPod menu system will operate much slower without it (on large libraries), as it will have to build the information provided here on the fly. Therefore it is recommended to build this MHOD for anything more than trivial numbers of songs.
+Note that this MHOD is not mandatory, however the menu system will operate much slower without it (on large libraries), as it will have to build the information provided here on the fly. Therefore it is recommended to build this MHOD for anything more than trivial numbers of songs.
 
 Essentially, every MHIT is numbered from 0 to the total number of songs-1. The type 52 MHOD contains a list of these index numbers using one of the strings contained in these MHIT's, ordered alphabetically.
 

@@ -1,6 +1,6 @@
 # iTunesCDB
 
-The iTunesCDB file is a compressed variant of the [iTunesDB](./iTunesDB/index.md) used on the 5th, 6th, and 7th generation iPod nano. The file is located at `/iPod_Control/iTunes/iTunesCDB`.
+The iTunesCDB file is a compressed variant of the [iTunesDB](./iTunesDB/index.md) used on the fifth-, sixth-, and seventh-generation iPod nano. The file is located at `/iPod_Control/iTunes/iTunesCDB`.
 
 ## File Format
 

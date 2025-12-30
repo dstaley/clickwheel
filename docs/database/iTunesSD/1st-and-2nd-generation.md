@@ -1,6 +1,6 @@
-# iTunesSD (1st and 2nd generation)
+# iTunesSD (first- and second-generation)
 
-The iTunesSD file on 1st and 2nd generation iPod shuffle is in a big-endian byte order. It consists of a header followed by a bunch of entries, one after the other. The format is much simpler than the iTunesDB. Only the iPod Shuffle is known to use this file at the moment. The Shuffle uses only this file for playing songs, but nevertheless a valid iTunesDB must be present on the device. When connecting to iTunes, only the iTunesDB is read back, not the iTunesSD.
+The iTunesSD file on first- and second-generation iPod shuffle is in a big-endian byte order. It consists of a header followed by a bunch of entries, one after the other. The format is much simpler than the iTunesDB. Only iPod shuffle is known to use this file at the moment. iPod shuffle uses only this file for playing songs, but nevertheless a valid iTunesDB must be present on the device. When connecting to iTunes, only the iTunesDB is read back, not the iTunesSD.
 
 ## Header
 
@@ -19,7 +19,7 @@ Field | Size | Value
 ----- | ---- | -----
 size of entry | 3 | Always 0x22e (558 bytes)
 unk1 | 3 | unknown (always 0x5aa501 ?)
-starttime | 3 | Start Time, in 256 millisecond increments - e.g. 60 seconds = 0xea (234 dec). The reason for this is that the iPodShuffle has only a simplistic "clock". Every millisecond it increments an 8 bit counter. When the counter overflows, this causes an interrupt or something like that which causes it to increment this "clock" value. Very simple clock, easy to do in a an 8-bit register. Basically multiply whatever value you find here by 0.256 to convert it to seconds. Leaving this as zero means it plays from the beginning of the file.
+starttime | 3 | Start Time, in 256 millisecond increments - e.g. 60 seconds = 0xea (234 dec). The reason for this is that iPod shuffle has only a simplistic "clock". Every millisecond it increments an 8 bit counter. When the counter overflows, this causes an interrupt or something like that which causes it to increment this "clock" value. Very simple clock, easy to do in a an 8-bit register. Basically multiply whatever value you find here by 0.256 to convert it to seconds. Leaving this as zero means it plays from the beginning of the file.
 unk2 | 3 | unknown (always 0?)
 unk3 | 3 | Unknown, but seems to be associated with start time (start time of 0xea resulted in unk3 = 0x1258ee)
 stoptime | 3 | Stop Time, also in 256 millisecond increments - e.g. 120 seconds = 0x1d4 (468 dec). Leaving this as zero means it'll play to the end of the file.
