@@ -15,8 +15,8 @@ Offset | Field | Size | Value
 50 | unknown | 20 | Observed in dbversion 0x19 and later for third-generation iPod nano and iPod classic. Meaning unknown so far.
 70 | language | 2 | Observed in dbversion 0x13. It looks like this is a language id (langauge of the iTunes interface). For example for English(United States) this field has values 0x65 and 0x6E which is 'en'. The size of the filed might be bigger to distinguish different 'flavors' of a language.
 72 | library persistent id | 8 | Observed in dbversion 0x14. This is a 64-bit Persistent ID for this iPod Library. This matches the value of "Library Persistent ID" seen in hex form (as a 16-char hex string) in the drag object XML when dragging a song from an iPod in iTunes.
-80 | unknown | 4 | Observed values: 0x05 for iPod nano (3rd generation), 0x01 for iPod Color.
-84 | unknown | 4 | Observed values: 0x4d for iPod nano (3rd generation), 0x0f for iPod Color.
+80 | unknown | 4 | Observed values: 0x01 for third- and fourth-generation iPod nano (along with fourth-, fifth-, and sixth-generation iPod), 0x04 for fifth-, sixth-, and seventh-generation iPod nano.
+84 | unknown | 4 |
 88 | hash58 | 20 | HMAC-SHA1 hash using a key derived from the iPod's FirewireId. Required for dbversion 0x19 (third-generation iPod nano and iPod classic).
 108 | timezone offset | 4 | Timezone offset in seconds.
 112 | secondary hashing scheme | 2 | A second indicator of the checksum/hashing scheme used: 0 = none/hash58, 3 = hash58 + hash72, 4 = hashAB.
