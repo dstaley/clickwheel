@@ -33,4 +33,4 @@ Note that this means the values themselves are in reversed byte order. The order
 
 ## Credits
 
-The documentation contained within the `docs/database` directory was originally taken from the [iPod Linux Wiki](http://www.ipodlinux.org/ITunesDB). The documentation for the [third- and fourth-generation iTunesSD database]() was taken from [nims11/IPod-Shuffle-4g](https://github.com/nims11/IPod-Shuffle-4g/blob/master/docs/iTunesSD3gen.md).
+The documentation contained within the `docs/database` directory was originally taken from the [iPod Linux Wiki](http://www.ipodlinux.org/ITunesDB). The documentation for the [third- and fourth-generation iTunesSD database](./iTunesSD/3rd-and-4th-generation.md) was taken from [nims11/IPod-Shuffle-4g](https://github.com/nims11/IPod-Shuffle-4g/blob/master/docs/iTunesSD3gen.md).
