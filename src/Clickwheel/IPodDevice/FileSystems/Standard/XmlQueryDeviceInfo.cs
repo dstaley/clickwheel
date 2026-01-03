@@ -114,6 +114,8 @@ namespace Clickwheel.IPodDevice.FileSystems
         public string? RawDeviceDescriptor { get; private set; }
 
         public string? OSVersion { get; private set; }
+        
+        public string? DBVersion { get; private set; }
 
         private void ParseDeviceXml(XmlDocument document)
         {
@@ -146,6 +148,14 @@ namespace Clickwheel.IPodDevice.FileSystems
             if (node != null) {
                 OSVersion = node.InnerText;
                 Trace.WriteLine("iPod OS Version: " + OSVersion);
+            }
+            
+            node = document.SelectSingleNode(
+                "/plist/dict/key[text()='DBVersion']/following-sibling::*[1]"
+            );
+            if (node != null) {
+                DBVersion = node.InnerText;
+                Trace.WriteLine("iPod DB Version: " + DBVersion);
             }
 
             if (FamilyId == (int)IPodFamily.iPod_Nano_Gen5)
