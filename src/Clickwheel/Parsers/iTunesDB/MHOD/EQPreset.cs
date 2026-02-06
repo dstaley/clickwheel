@@ -47,7 +47,7 @@ namespace Clickwheel.Parsers.iTunesDB
         public static string EncodeAsString(EQPreset preset)
         {
             if (preset == null)
-                return null;
+                return "";
             
             return $"{_magicString}{preset.ID}{_magicString}";
         }
