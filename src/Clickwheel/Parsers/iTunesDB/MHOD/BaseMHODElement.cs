@@ -12,6 +12,7 @@ namespace Clickwheel.Parsers.iTunesDB
         public const int Artist = 4;
         public const int Genre = 5;
         public const int FileType = 6;
+        public const int EQPreset = 7;
         public const int Comment = 8;
         public const int Composer = 12;
         public const int DescriptionText = 14;

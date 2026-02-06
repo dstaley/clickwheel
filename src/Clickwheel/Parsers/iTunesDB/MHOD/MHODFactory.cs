@@ -40,6 +40,10 @@ namespace Clickwheel.Parsers.iTunesDB
                 case MHODElementType.PlaylistPosition:
                     newMhod = new PlaylistPositionMHOD();
                     break;
+                
+                case MHODElementType.EQPreset:
+                    newMhod = new ConvertibleUnicodeMHOD<EQPreset>();
+                    break;
 
                 default:
                     var umhod = new UnknownMHOD();
