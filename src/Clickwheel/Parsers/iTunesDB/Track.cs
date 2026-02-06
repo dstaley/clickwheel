@@ -766,6 +766,7 @@ namespace Clickwheel.Parsers.iTunesDB
                 if (string.IsNullOrEmpty(data))
                 {
                     _childSections.Remove(mhod);
+                    _isDirty = true;
                     return;
                 }
                 mhod.Data = data;
