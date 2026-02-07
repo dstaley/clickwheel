@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Clickwheel.Exceptions;
+using Clickwheel.Parsers;
 
-namespace Clickwheel.Parsers.iTunesDB
+namespace Clickwheel.DataTypes
 {
     public sealed record EQPreset : Helpers.IStringConvertible<EQPreset> 
     {

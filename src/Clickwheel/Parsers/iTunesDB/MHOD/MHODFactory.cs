@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Clickwheel.DataTypes;
 
 namespace Clickwheel.Parsers.iTunesDB
 {
