@@ -307,8 +307,8 @@
       },
       "SixLabors.ImageSharp": {
         "type": "Transitive",
-        "resolved": "3.1.6",
-        "contentHash": "dHQ5jugF9v+5/LCVHCWVzaaIL6WOehqJy6eju/0VFYFPEj2WtqkGPoEV9EVQP83dHsdoqYaTuWpZdwAd37UwfA=="
+        "resolved": "3.1.12",
+        "contentHash": "iAg6zifihXEFS/t7fiHhZBGAdCp3FavsF4i2ZIDp0JfeYeDVzvmlbY1CNhhIKimaIzrzSi5M/NBFcWvZT2rB/A=="
       },
       "SQLitePCLRaw.bundle_e_sqlite3": {
         "type": "Transitive",
@@ -1144,7 +1144,7 @@
         "type": "Project",
         "dependencies": {
           "Microsoft.Data.Sqlite": "[6.0.4, )",
-          "SixLabors.ImageSharp": "[3.1.6, )"
+          "SixLabors.ImageSharp": "[3.1.12, )"
         }
       }
     }
