@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using Clickwheel.DataTypes;
 
 namespace Clickwheel.Parsers.iTunesDB
 {
@@ -26,6 +25,7 @@ namespace Clickwheel.Parsers.iTunesDB
                 case MHODElementType.Artist:
                 case MHODElementType.Genre:
                 case MHODElementType.FileType:
+                case MHODElementType.EQPreset:
                 case MHODElementType.Comment:
                 case MHODElementType.Composer:
                 case MHODElementType.AlbumArtist:
@@ -40,10 +40,6 @@ namespace Clickwheel.Parsers.iTunesDB
 
                 case MHODElementType.PlaylistPosition:
                     newMhod = new PlaylistPositionMHOD();
-                    break;
-                
-                case MHODElementType.EQPreset:
-                    newMhod = new ConvertibleUnicodeMHOD<EQPreset>();
                     break;
 
                 default:

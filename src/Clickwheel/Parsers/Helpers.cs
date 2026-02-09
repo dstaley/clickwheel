@@ -225,16 +225,5 @@ namespace Clickwheel.Parsers
                     return string.Empty;
             }
         }
-        
-        internal interface IStringConvertible<T> where T : IStringConvertible<T>
-        {
-            static abstract string EncodeAsString(T obj);
-            static abstract T DecodeFromString(string input);
-        }
-    }
-    
-    internal static class IStringConvertibleExtensions
-    {
-        public static string EncodeAsString<T>(this T obj) where T : Helpers.IStringConvertible<T> => T.EncodeAsString(obj);
     }
 }

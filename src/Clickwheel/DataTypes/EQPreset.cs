@@ -5,7 +5,7 @@ using Clickwheel.Parsers;
 
 namespace Clickwheel.DataTypes
 {
-    public sealed record EQPreset : Helpers.IStringConvertible<EQPreset> 
+    public sealed record EQPreset 
     {
         private static readonly Dictionary<int, EQPreset> Presets = new();
         

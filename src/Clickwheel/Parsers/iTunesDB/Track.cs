@@ -367,10 +367,9 @@ namespace Clickwheel.Parsers.iTunesDB
             }
         }
         
-        public EQPreset EQPreset
-        {
-            get => GetConvertibleDataElement<EQPreset>(MHODElementType.EQPreset);
-            set => SetConvertibleDataElement(MHODElementType.EQPreset, value);
+        public EQPreset EQPreset {
+            get => EQPreset.DecodeFromString(GetDataElement(MHODElementType.EQPreset));
+            set => SetDataElement(MHODElementType.EQPreset, EQPreset.EncodeAsString(value));
         }
 
         public string Comment
@@ -790,14 +789,6 @@ namespace Clickwheel.Parsers.iTunesDB
             }
             _isDirty = true;
         }
-        
-        private T GetConvertibleDataElement<T>(int type)
-            where T : Helpers.IStringConvertible<T>
-            => T.DecodeFromString(GetDataElement(type));
-
-        private void SetConvertibleDataElement<T>(int type, T data)
-            where T : Helpers.IStringConvertible<T>
-            => SetDataElement(type, data.EncodeAsString());
 
         public bool IsNew => _isNew;
 
