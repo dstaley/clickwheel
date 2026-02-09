@@ -366,6 +366,11 @@ namespace Clickwheel.Parsers.iTunesDB
                 }
             }
         }
+        
+        public EQPreset EQPreset {
+            get => EQPreset.DecodeFromString(GetDataElement(MHODElementType.EQPreset));
+            set => SetDataElement(MHODElementType.EQPreset, EQPreset.EncodeAsString(value));
+        }
 
         public string Comment
         {
@@ -766,6 +771,7 @@ namespace Clickwheel.Parsers.iTunesDB
                 if (string.IsNullOrEmpty(data))
                 {
                     _childSections.Remove(mhod);
+                    _isDirty = true;
                     return;
                 }
                 mhod.Data = data;
