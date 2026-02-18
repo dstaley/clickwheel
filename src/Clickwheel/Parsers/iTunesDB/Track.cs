@@ -823,6 +823,10 @@ namespace Clickwheel.Parsers.iTunesDB
                 this.Artist = newTrack.Artist;
             }
 
+            if (newTrack.EQPreset != null) {
+                this.EQPreset = newTrack.EQPreset;
+            }
+
             if (!string.IsNullOrEmpty(newTrack.Comments))
             {
                 this.Comment = newTrack.Comments;
