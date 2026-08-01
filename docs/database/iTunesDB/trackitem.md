@@ -86,6 +86,10 @@ Offset | Field | Size | Value
 312 | unk44 | 2 | unknown (previously length 8, seen as 0x818080808080)
 314 | AlbumID | 2 | album id from the album list (previously unknown length 8, seen as 0x818080808080)
 352 | mhii-link | 4 | Setting this offset to != 0 triggers the 'Right-Pane-Artwork-Slideshow' on late 2007 iPods (third-generation iPod nano) and causes the iPod to use this value to do artwork lookups (dbid_1 will be ignored!). This value should be set to the id of the corresponding ArtworkDB mhii (Offset 16)
+356 | unk45 | 128 | unknown
+484 | genius_id | 8 | Little-endian Genius track ID. This value corresponds to the `genius_id` primary key in the `genius_metadata` and `genius_similarities` tables of `Genius.itdb`/`Extras.itdb`. Set to zero when the track has no Genius data.
+492 | unk46 | 90 | unknown
+582 | liked/disliked | 2 | `00 00` for no preference, `02 02` for liked, and `03 03` for disliked.
 
 The rest of the header is zero padded.
 
