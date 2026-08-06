@@ -25,6 +25,7 @@ namespace Clickwheel.Parsers.iTunesDB
                 case MHODElementType.Artist:
                 case MHODElementType.Genre:
                 case MHODElementType.FileType:
+                case MHODElementType.EQPreset:
                 case MHODElementType.Comment:
                 case MHODElementType.Composer:
                 case MHODElementType.AlbumArtist:

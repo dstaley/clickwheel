@@ -1,3 +1,5 @@
+using Clickwheel.DataTypes;
+
 namespace Clickwheel
 {
     /// <summary>
@@ -11,6 +13,7 @@ namespace Clickwheel
         public string Title;
         public string Artist;
         public string Album;
+        public EQPreset EQPreset;
         public string Comments;
 
         /// <summary>
